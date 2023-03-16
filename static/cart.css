@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px #fff, 0 0 1px 3px #2b4986;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: #f0f2f5;
+  color: #000;
+}
+
+.skip-nav {
+  --nav-height: 48px;
+  margin-top: var(--nav-height);
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+.top_nav {
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 1px 5px 0 rgba(204, 204, 204, 0.48);
+  position: fixed;
+  width: 100%;
+  z-index: 300;
+}
+
+.top_nav .nav_container {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.top_nav .nav_container .logo {
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #4267b2;
+}
+.top_nav .nav_container .cart-container {
+  margin-left: auto;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.top_nav .nav_container .cart-container .count {
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #bb6b03;
+  color: #fff;
+  line-height: 16px;
+  padding: 3px 7px;
+  border-radius: 7px;
+  margin-left: 8px;
+}
+
+.box {
+  background-color: #fff;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 1rem;
+  margin-bottom: 24px;
+}
+
+select {
+  display: inline-block;
+  padding: 0 12px;
+  background-color: #f5f6f7;
+  color: #4b4f56;
+  height: 26px;
+  border-radius: 2px;
+  border: 1px solid #c1c2bf;
+  transition: 200ms cubic-bezier(0.4, 0, 0.2, 1) background-color;
+}
+
+select:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.a-button {
+  display: inline-block;
+  line-height: 30px;
+  padding: 0 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  user-select: none;
+  text-decoration: none;
+  transition: background-color 200ms cubic-bezier(0.8, 0.52, 0.52, 1),
+    box-shadow 200ms cubic-bezier(0.8, 0.52, 0.52, 1);
+}
+
+.a-button:hover {
+  cursor: pointer;
+}
+
+.a-button-secondary {
+  background-color: #f5f6f7;
+  border-color: #ccc;
+  color: #4b4f56;
+}
+
+.a-button-secondary:hover {
+  background-color: #eee;
+}
+.a-button-secondary:active {
+  background-color: #ddd;
+}
+
+.a-button-primary {
+  background-color: #4267b2;
+  border-color: #4267b2;
+  color: #fff;
+}
+
+.a-button-primary:hover {
+  background-color: #3a59af;
+}
+
+.a-button-primary:active {
+  background-color: #273f80;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #c1c2bf;
+  padding-top: 12px;
+}
+
+.product {
+  flex-grow: 1;
+}
+
+.image {
+  height: 180px;
+  width: 180px;
+  background-color: #e4e6eb;
+  margin-right: 12px;
+}
+
+.details {
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-right: 12px;
+}
+
+.info-parent {
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-bottom: 4px;
+}
+
+.left {
+  color: #b12701;
+  font-size: 12px;
+  line-height: 1.5;
+  display: block;
+}
+
+.stock {
+  color: #007600;
+  font-size: 12px;
+  line-height: 1.5;
+  display: block;
+}
+
+.info > div b,
+.info > div span {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.price {
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: right;
+  margin-left: auto;
+}
+
+.quantity {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkout {
+  padding: 1rem;
+  background-color: #fff;
+  margin-left: 24px;
+  width: 100%;
+}
+
+.checkout .total {
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.right {
+  flex-shrink: 0;
+  min-width: 300px;
+}
+
+/* 
+  *******************************************************
+
+  ================= UTILITY CLASSES =====================
+
+  *******************************************************
+*/
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.mt-5 {
+  margin-top: calc(0.25rem * 5);
+}
+
+.flex {
+  display: flex;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.pt-5 {
+  padding-top: calc(0.25rem * 5);
+}

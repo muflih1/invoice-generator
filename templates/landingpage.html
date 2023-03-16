@@ -1,0 +1,64 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'style.css' %} ">
+
+</head>
+<body>
+    <div class="text" >
+        <h3>Fashion store </h3>
+        <B><p>Fashion is not just beauty its about good attitude</p></B>
+
+    </div>
+    
+
+
+<div class="banner-container">
+
+    <div class="banner">
+        <div class="shoe">
+            <img src="{% static 'shoe.jpg' %}" alt="">
+        </div>
+        <div class="content">
+            <span>upto</span>
+            <h3>50% 0ff</h3>
+            <p>offer closes soon</p>
+            <a href="{% url 'index' %}" class="btn">Explore </a>
+        </div>
+        <div class="women">
+            <img src="{% static 'women.jpg' %}" alt="">
+        </div>
+    </div>
+
+</div>
+
+<div class="banner-container">
+
+    <div class="banner">
+        <div class="shoe">
+            <img src="/static/bag.jpg " alt="">
+        </div>
+        <div class="content">
+            <span>upto</span>
+            <h3>50% 0ff</h3>
+            <p>offer ends after 5 days</p>
+            <a href="{% url 'index' %}" class="btn">Explore</a>
+        </div>
+        <div class="women">
+            <img src="/static/men.jpg" alt="">
+        </div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
